@@ -1,0 +1,93 @@
+/* 750 보다 작을 때 */
+@media screen and (max-width:749px) {
+    /* [레이아웃] 콘텐츠 영역의 양 옆 여백을 줄임 */
+    .mw-body {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+}
+
+/* 600 보다 작을 때 (아이폰 6/7/8 플러스 등) */
+@media screen and (max-width:599px) {
+    /* 본문 영역 */
+    body.ns-subject.action-view #mw-content-text {
+        ol {
+            /* 본문에서 숫자형 목록, 하단의 레퍼런스 목록 등 */
+            margin-left: 1.6em;
+        }
+        #toc {
+            & > ul {
+                /* [문서화면] toc 의 첫번째 ul 좌측 여백 (앞서보다 작게 조절) */
+                margin-left: 0;
+            }
+        }
+    }
+
+    body.ns-subject {
+        div.thumbinner {
+            /* 썸네일 이미지 줄이기 (1) */
+            width: 100px !important;
+        }
+        .thumbimage {
+            /* 썸네일 이미지 줄이기 (2) */
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    /* '여기를 가리키는 문서'에서 input width 이상하게 잡히는 경우*/
+    /* 예전 버전에만 있었던 듯. 최근 버전에서는 해당 셀렉터가 없음. */
+    input.mw-searchInput {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+    }
+}
+
+/* 400 보다 작을 때 (아이폰 6/7/8 등) */
+@media screen and (max-width:400px) {
+    /* [레이아웃] 본문 영역 글자 크기 */
+    body.ns-subject.action-view #mw-content-text {
+        ol {
+            /* 본문에서 숫자형 목록, 하단의 레퍼런스 목록 등 */
+            margin-left: 1.125em;
+        }
+    }
+    /* 최상단의 '토론' '기여' 항목을 감춤 */
+    #p-personal ul.vector-menu-content-list {
+        padding-left: 8em;
+        li#pt-mytalk, li#pt-mycontris {
+            display:none;
+        }
+        ul {
+            /* 최상단의 '환경 설정, 로그아웃'등의 영역인데 맨 좌측 여백을 줄임 */
+            padding-left: 0 !important;
+        }
+    }
+    /* 토론 탭 숨김 */
+    li#ca-talk {
+        display: none;
+    }
+
+}
+
+/* 매우 작은 기기에서 볼 때 (아이폰 5 등) */
+@media screen and (max-width:365px) {
+    div#simpleSearch {
+        width: 80px !important;
+        max-width: 80px !important;
+        min-width: 80px !important;
+    }
+    #p-search {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+    div.vectorTabs li a {
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+    }
+    div.vectorMenu h3 span {
+        padding-left: 0.2em;
+    }
+}

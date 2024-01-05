@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/* ********** 레이아웃 관련 ************* */
+/* 검색 영역의 크기를 크게 고정 */
+div#simpleSearch {
+  /*width: 13.2em !important;*/
+  /*width: 220px !important;*/
+  max-width: 500px;
+  min-width: 200px;
+}
+
+/* word break */
+.mw-body-content p, .mw-body-content pre, .mw-body-content span {
+  word-break: break-all;
+}
+.mw-body-content table caption {
+  word-break: break-all;
+}
+.mw-body-content table th, .mw-body-content table td {
+  word-break: break-all;
+}
+.mw-body-content li {
+  word-break: break-all;
+}
+
+/* 750 보다 작을 때 */
+@media screen and (max-width: 749px) {
+  /* [레이아웃] 콘텐츠 영역의 양 옆 여백을 줄임 */
+  .mw-body {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
+/* 600 보다 작을 때 (아이폰 6/7/8 플러스 등) */
+@media screen and (max-width: 599px) {
+  /* 본문 영역 */
+  body.ns-subject.action-view #mw-content-text ol {
+    /* 본문에서 숫자형 목록, 하단의 레퍼런스 목록 등 */
+    margin-left: 1.6em;
+  }
+  body.ns-subject.action-view #mw-content-text #toc > ul {
+    /* [문서화면] toc 의 첫번째 ul 좌측 여백 (앞서보다 작게 조절) */
+    margin-left: 0;
+  }
+  body.ns-subject div.thumbinner {
+    /* 썸네일 이미지 줄이기 (1) */
+    width: 100px !important;
+  }
+  body.ns-subject .thumbimage {
+    /* 썸네일 이미지 줄이기 (2) */
+    width: 100%;
+    height: 100%;
+  }
+  /* '여기를 가리키는 문서'에서 input width 이상하게 잡히는 경우*/
+  /* 예전 버전에만 있었던 듯. 최근 버전에서는 해당 셀렉터가 없음. */
+  input.mw-searchInput {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+/* 400 보다 작을 때 (아이폰 6/7/8 등) */
+@media screen and (max-width: 400px) {
+  /* [레이아웃] 본문 영역 글자 크기 */
+  body.ns-subject.action-view #mw-content-text ol {
+    /* 본문에서 숫자형 목록, 하단의 레퍼런스 목록 등 */
+    margin-left: 1.125em;
+  }
+  /* 최상단의 '토론' '기여' 항목을 감춤 */
+  #p-personal ul.vector-menu-content-list {
+    padding-left: 8em;
+  }
+  #p-personal ul.vector-menu-content-list li#pt-mytalk, #p-personal ul.vector-menu-content-list li#pt-mycontris {
+    display: none;
+  }
+  #p-personal ul.vector-menu-content-list ul {
+    /* 최상단의 '환경 설정, 로그아웃'등의 영역인데 맨 좌측 여백을 줄임 */
+    padding-left: 0 !important;
+  }
+  /* 토론 탭 숨김 */
+  li#ca-talk {
+    display: none;
+  }
+}
+/* 매우 작은 기기에서 볼 때 (아이폰 5 등) */
+@media screen and (max-width: 365px) {
+  div#simpleSearch {
+    width: 80px !important;
+    max-width: 80px !important;
+    min-width: 80px !important;
+  }
+  #p-search {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  div.vectorTabs li a {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+  }
+  div.vectorMenu h3 span {
+    padding-left: 0.2em;
+  }
+}
+/* 네비게이션 부분을 responsive 하게 적용하는 CSS */
+@media screen and (max-width: 1024px) {
+  /* '.mw-body' : 문서 영역 / 'div#footer' : 페이지 하단 부분 (면책 조항 등이 있는 영역) / '#left-navigation' : 문서 상단의 네비게이션 */
+  .mw-body, div#footer, #left-navigation {
+    margin-left: 0 !important;
+  }
+  /* 상단 패널 의 좌측 여백을 좀 줄임. 기본값은 10em 이어서 여백이 너무 큼. 큰 차이는 없는데? */
+  /* #p-personal ul{ padding-left: 2.5em; } */
+  #p-logo {
+    top: 0px;
+    width: 50px !important;
+    height: 50px !important;
+    z-index: 101;
+    position: absolute;
+  }
+  #p-logo .mw-wiki-logo {
+    width: 50px;
+    height: 50px;
+    background-size: 50px;
+  }
+  /* 사이드 메뉴 네비게이션 영역 */
+  #mw-panel {
+    /* 내비게이션을 아래로 내림 */
+    position: static !important;
+    /* 내비게이션 부분을 float 처리 */
+    width: inherit !important;
+    display: inline-block;
+  }
+  #mw-panel .portal {
+    float: left;
+  }
+  #mw-panel:after {
+    content: "";
+    clear: both;
+  }
+  /* footer의 좌측 여백 */
+  #footer {
+    margin-left: 0;
+  }
+}

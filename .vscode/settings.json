@@ -1,0 +1,34 @@
+{
+    "intelephense.diagnostics.undefinedConstants": false,
+    "intelephense.diagnostics.undefinedClassConstants": true,
+    "intelephense.diagnostics.undefinedFunctions": false,
+    "intelephense.diagnostics.undefinedTypes": false,
+    "cSpell.words": [
+        "catlinks",
+        "codehighlight",
+        "copywarn",
+        "disablelinks",
+        "editfont",
+        "editpage",
+        "editsection",
+        "hljs",
+        "innertable",
+        "mycontris",
+        "mytalk",
+        "Nanum",
+        "navi",
+        "thumbimage",
+        "thumbinner",
+        "wikitable"
+    ],
+    "liveSassCompile.settings.forceBaseDirectory": "/scss",
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/resources",
+            "savePathReplacementPairs": null
+        }
+    ],
+    "liveSassCompile.settings.generateMap": false
+}

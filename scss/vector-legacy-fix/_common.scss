@@ -1,0 +1,26 @@
+/* ********** 레이아웃 관련 ************* */
+/* 검색 영역의 크기를 크게 고정 */
+div#simpleSearch {
+    /*width: 13.2em !important;*/
+    /*width: 220px !important;*/
+    max-width: 500px;
+    min-width: 200px;
+}
+
+/* word break */
+.mw-body-content {
+    p, pre, span {
+        word-break: break-all;
+    }
+    table {
+        caption {
+            word-break: break-all;
+        }
+        th, td {
+            word-break: break-all;
+        }
+    }
+    li {
+        word-break:break-all;
+    }
+}

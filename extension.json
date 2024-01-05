@@ -1,0 +1,30 @@
+{
+    "name": "VectorSkinAdjust",
+    "version": "1.0.0",
+    "author": "[https://github.com/exizt exizt]",
+    "url": "https://github.com/exizt/mw-ext-VectorSkinAdjust",
+    "description": "MediaWiki Legacy Vector skin adjust",
+    "license-name": "GPL-2.0-or-later",
+    "type": "other",
+    "requires": {
+        "MediaWiki": ">= 1.35.0"
+    },
+    "Hooks": {
+        "BeforePageDisplay": "VectorSkinAdjust::onBeforePageDisplay"
+    },
+    "AutoloadClasses": {
+        "VectorSkinAdjust": "src/VectorSkinAdjust.php"
+    },
+    "ResourceFileModulePaths": {
+        "localBasePath": "resources",
+        "remoteExtPath": "VectorSkinAdjust/resources"
+    },
+    "ResourceModules": {
+        "ext.vector-skin-adjust.legacy-fix": {
+            "styles": [
+                "vector-legacy-fix.css"
+            ]
+        }
+    },
+    "manifest_version": 2
+}
