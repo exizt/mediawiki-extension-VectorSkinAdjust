@@ -1,0 +1,21 @@
+/* 기본 기능 인터페이스에 대한 보정 */
+/* '특수:버전' 문서에서 테이블의 responsive fix */
+@media ( max-width: 720px ) {
+    body.mw-special-Version {
+        table.wikitable {
+            display: block;
+            overflow-x: auto;
+            overflow-y: hidden;
+            border: 0;
+            background-color: inherit;
+
+            tbody {
+                background-color: #f8f9fa;
+            }
+
+            th, td {
+                white-space: nowrap
+            }
+        }
+    }
+}
