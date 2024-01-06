@@ -38,6 +38,10 @@ div#simpleSearch {
   body.mw-special-Version table.wikitable th, body.mw-special-Version table.wikitable td {
     white-space: nowrap;
   }
+  body.mw-special-Version table.wikitable#sv-ext th[colspan="5"] {
+    text-align: left;
+    padding-left: 0.5em;
+  }
 }
 /* 750 보다 작을 때 */
 @media screen and (max-width: 749px) {
