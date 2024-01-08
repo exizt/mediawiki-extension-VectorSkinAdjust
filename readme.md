@@ -3,5 +3,5 @@
 
 # git 클론
 ```shell
-git clone git@github.com:exizt/mw-ext-VectorSkinAdjust.git VectorSkinAdjust
+git clone git@github.com:exizt/mediawiki-extension-VectorSkinAdjust.git VectorSkinAdjust
 ```
